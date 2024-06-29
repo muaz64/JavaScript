@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question01</title>
+</head>
+<body>
+    <h4>What is the output of the following code and why?</h4>
+    <p>for (var i = 0; i < 3; i++) {
+        setTimeout(function() {
+          console.log(i);
+        }, 1000);
+      }
+      </p><br>
+      <p>Answer:
+        The output will be 3 3 3.
+        <br><br>
+        Explanation:
+        The setTimeout function creates a closure that captures the variable i by reference, not by value. By the time the setTimeout callbacks execute, the loop has already completed and i is 3.
+        
+        To fix this and log 0 1 2, you can use let instead of var, which creates a block-scoped variable:</p>
+    <script src="index.js"></script>
+    </body>
+</html>
