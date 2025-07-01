@@ -16,7 +16,7 @@ console.log(person.size);
 
 person.forEach((value, key) => console.log(`key is: ${key} and the value is : ${value}`));
 
-for(let[key, value] of person.entries()) {
+for(let [key, value] of person.entries()) {
     console.log(`key is: ${key} and the value is : ${value}`);
 }
 
